@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@drawable/r_page">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="12dp" android:background="#FFFFFF">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/nutricare_logo" android:contentDescription="Logo NutriCare" android:scaleType="fitCenter" android:background="@drawable/r_circle" android:clipToOutline="true" android:layout_marginEnd="8dp"/>
+        <TextView android:layout_width="44dp" android:layout_height="wrap_content" android:text="‹" android:textSize="30sp" android:fontFamily="@font/plus_jakarta" android:textColor="#006C49" android:id="@+id/btnBack" android:gravity="center" android:clickable="true" android:focusable="true"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="Makanan Indonesia" android:textSize="20sp" android:fontFamily="@font/plus_jakarta" android:textColor="#006C49" android:layout_weight="1" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Asisten" android:textSize="14sp" android:fontFamily="@font/plus_jakarta" android:textColor="#FFFFFF" android:id="@+id/btnChat" android:gravity="center" android:padding="12dp" android:minHeight="48dp" android:background="@drawable/r_dark" android:clickable="true" android:focusable="true"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cari makanan rumahan, jajanan, minuman, dan bahan pangan." android:textSize="12sp" android:fontFamily="@font/plus_jakarta" android:textColor="#53645B" android:layout_marginBottom="12dp"/>
+        <EditText android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/etCatalogSearch" android:hint="Cari seblak, nasi goreng, klepon…" android:singleLine="true" android:inputType="text" android:fontFamily="@font/plus_jakarta" android:textSize="14sp" android:padding="12dp" android:background="@drawable/r_white"/>
+        <Spinner android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/spCategory" android:layout_marginTop="8dp" android:background="@drawable/r_lavender"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/cbReady" android:text="Siap santap" android:textColor="#006C49" android:buttonTint="#10B981"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="" android:textSize="11sp" android:fontFamily="@font/plus_jakarta" android:textColor="#53645B" android:id="@+id/tvFoodCount" android:layout_weight="1" android:gravity="end"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Data gizi TKPI per 100 g BDD. Kolom kosong bukan berarti nol." android:textSize="11sp" android:fontFamily="@font/plus_jakarta" android:textColor="#53645B"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/rvFoods" android:paddingHorizontal="16dp" android:paddingBottom="16dp" android:clipToPadding="false"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tidak ada makanan yang cocok." android:textSize="14sp" android:fontFamily="@font/plus_jakarta" android:textColor="#111C2D" android:id="@+id/tvCatalogEmpty" android:gravity="center" android:layout_gravity="center" android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>
+
+

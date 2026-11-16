@@ -1,0 +1,5 @@
+<resources>
+ <style name="AdminInput" parent="NcInput"><item name="android:background">@drawable/r_lavender</item><item name="android:singleLine">true</item><item name="android:layout_marginBottom">4dp</item></style>
+ <style name="AdminButton" parent="NcButton"><item name="android:background">@drawable/r_green</item><item name="android:layout_marginTop">12dp</item></style>
+ <style name="AdminNav" parent="NcNav"><item name="android:layout_height">64dp</item><item name="android:gravity">center</item><item name="android:clickable">true</item><item name="android:focusable">true</item><item name="android:background">@drawable/r_nav</item><item name="android:drawablePadding">5dp</item></style>
+</resources>

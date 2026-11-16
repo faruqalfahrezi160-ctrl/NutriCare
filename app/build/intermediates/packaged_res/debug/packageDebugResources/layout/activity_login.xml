@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/r_page" android:orientation="vertical">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="242dp" android:background="@drawable/r_header">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="24dp" android:paddingHorizontal="16dp" android:orientation="vertical">
+                    <FrameLayout android:layout_width="92dp" android:layout_height="92dp" android:layout_gravity="center_horizontal" android:layout_marginBottom="16dp">
+                        <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/r_badge"/>
+                        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/nutricare_logo" android:background="@drawable/r_card24" android:layout_gravity="center" android:clipToOutline="true" android:scaleType="fitCenter" android:contentDescription="Logo NutriCare"/>
+                        <View android:layout_width="16dp" android:layout_height="16dp" android:background="@drawable/r_coral" android:layout_gravity="top|end"/>
+                    </FrameLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_0" android:textSize="24sp" android:textColor="#FFFFFF" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp" android:gravity="center"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_1" android:textSize="14sp" android:textColor="#6FFBBE" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:gravity="center" android:layout_marginTop="3dp"/>
+                </LinearLayout>
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/fg_s290_0" android:adjustViewBounds="true" android:layout_gravity="bottom" android:scaleType="fitCenter" android:contentDescription="@null"/>
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginTop="-12dp" android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/r_card24" android:padding="24dp" android:layout_marginBottom="14dp" android:elevation="6dp" android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_3" android:textSize="14sp" android:textColor="#111C2D" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp" android:layout_marginBottom="6dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/r_lavender" android:gravity="center_vertical">
+                            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/fg_s290_1" android:layout_marginStart="14dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+                            <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/etEmail" android:layout_weight="1" android:minHeight="48dp" android:padding="12dp" android:background="@null" android:textSize="14sp" android:fontFamily="@font/plus_jakarta" android:textColor="#111C2D" android:textColorHint="#8B9A91" android:hint="@string/restore_2" android:inputType="textEmailAddress" android:singleLine="true" android:minLines="1" android:imeOptions="actionNext"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:orientation="vertical">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_5" android:textSize="14sp" android:textColor="#111C2D" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp" android:layout_marginBottom="6dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/r_lavender" android:gravity="center_vertical">
+                            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/fg_s290_2" android:layout_marginStart="14dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+                            <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/etPassword" android:layout_weight="1" android:minHeight="48dp" android:padding="12dp" android:background="@null" android:textSize="14sp" android:fontFamily="@font/plus_jakarta" android:textColor="#111C2D" android:textColorHint="#8B9A91" android:hint="@string/restore_4" android:inputType="textPassword" android:singleLine="true" android:minLines="1" android:imeOptions="actionNext"/>
+                            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/fg_s290_3" android:id="@+id/btnEye" android:layout_marginEnd="14dp" android:clickable="true" android:focusable="true" android:contentDescription="@string/restore_6" android:scaleType="fitCenter"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <CheckBox android:layout_width="1dp" android:layout_height="1dp" android:id="@+id/cbShowPassword" android:visibility="gone"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="18dp" android:gravity="center_vertical">
+                        <CheckBox android:layout_width="0dp" android:layout_height="32dp" android:id="@+id/cbRemember" android:layout_weight="1" android:text="@string/restore_7" android:textSize="12sp" android:textColor="#3C4A42" android:fontFamily="@font/plus_jakarta" android:buttonTint="#006C49"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_8" android:textSize="12sp" android:textColor="#006C49" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp" android:id="@+id/btnForgot" android:clickable="true" android:focusable="true"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_12" android:textSize="12sp" android:textColor="#B32635" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:id="@+id/tvError" android:visibility="gone"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:id="@+id/btnLogin" android:background="@drawable/r_coral" android:gravity="center" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_11" android:textSize="14sp" android:textColor="#FFFFFF" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp"/>
+                        <ImageView android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/fg_s290_4" android:layout_marginStart="8dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" android:gravity="center_vertical">
+                        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#D8E3FB"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_13" android:textSize="12sp" android:textColor="#6C7A71" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:paddingHorizontal="12dp"/>
+                        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#D8E3FB"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="44dp" android:orientation="horizontal" android:layout_weight="1" android:background="@drawable/r_lavender" android:gravity="center" android:id="@+id/btnGoogle" android:clickable="true" android:focusable="true" android:layout_marginEnd="6dp" android:layout_marginStart="6dp">
+                            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/fg_s290_5" android:layout_marginEnd="10dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_9" android:textSize="14sp" android:textColor="#111C2D" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="44dp" android:orientation="horizontal" android:layout_weight="1" android:background="@drawable/r_lavender" android:gravity="center" android:id="@+id/btnApple" android:clickable="true" android:focusable="true" android:layout_marginEnd="6dp" android:layout_marginStart="6dp">
+                            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/fg_s290_6" android:layout_marginEnd="10dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_10" android:textSize="14sp" android:textColor="#111C2D" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/r_community" android:padding="16dp" android:layout_marginBottom="20dp" android:gravity="center_vertical">
+                    <ImageView android:layout_width="17dp" android:layout_height="17dp" android:src="@drawable/fg_s290_7" android:layout_marginEnd="8dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/restore_14" android:textSize="12sp" android:textColor="#3C4A42" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="24dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_15" android:textSize="14sp" android:textColor="#3C4A42" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_16" android:textSize="16sp" android:textColor="#10B981" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp" android:id="@+id/btnRegister" android:clickable="true" android:focusable="true" android:layout_marginStart="6dp"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_17" android:textSize="12sp" android:textColor="#006C49" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp" android:id="@+id/btnDemo" android:gravity="center" android:clickable="true" android:focusable="true" android:padding="12dp"/>
+                <Button style="@style/NcSecondaryButton" android:id="@+id/btnAdminPortal" android:text="Portal Admin &amp; Pengembang →" android:layout_marginTop="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

@@ -1,0 +1,7 @@
+#Sun Nov 15 18:10:14 WIB 2026
+base.0=C\:\\CODING\\mk 4 psas\\LoginApp\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.1=C\:\\CODING\\mk 4 psas\\LoginApp\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\1\\classes.dex
+path.0=0/classes.dex
+path.1=1/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

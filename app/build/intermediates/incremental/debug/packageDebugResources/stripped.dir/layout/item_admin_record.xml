@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/NcCard" android:padding="16dp">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+  <ImageView android:layout_width="56dp" android:layout_height="56dp" android:id="@+id/ivAdminItem" android:layout_marginEnd="10dp" android:scaleType="centerCrop" android:background="@drawable/r_lavender" android:clipToOutline="true" android:contentDescription="Foto resep" android:visibility="gone"/>
+  <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+   <TextView style="@style/NcSubtitle" android:id="@+id/tvAdminItemTitle" android:textSize="15sp" android:layout_marginBottom="3dp"/>
+   <TextView style="@style/NcMuted" android:id="@+id/tvAdminItemSubtitle" android:textSize="11sp" android:layout_marginBottom="0dp"/>
+  </LinearLayout>
+  <TextView style="@style/NcEyebrow" android:layout_width="wrap_content" android:id="@+id/tvAdminItemBadge" android:background="@drawable/r_mint" android:padding="6dp" android:textSize="9sp" android:layout_marginStart="4dp" android:layout_marginBottom="0dp"/>
+ </LinearLayout>
+ <TextView style="@style/NcBody" android:id="@+id/tvAdminItemBody" android:layout_marginTop="12dp" android:padding="12dp" android:background="@drawable/r_lavender" android:textSize="12sp"/>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+  <Button style="@style/NcSecondaryButton" android:layout_width="0dp" android:layout_weight="1" android:layout_marginBottom="0dp" android:minHeight="48dp" android:textSize="11sp" android:id="@+id/btnAdminItemSecondary"/>
+  <Button style="@style/NcButton" android:layout_width="0dp" android:layout_weight="1" android:layout_marginBottom="0dp" android:layout_marginStart="8dp" android:minHeight="48dp" android:textSize="11sp" android:id="@+id/btnAdminItemPrimary"/>
+ </LinearLayout>
+</LinearLayout>

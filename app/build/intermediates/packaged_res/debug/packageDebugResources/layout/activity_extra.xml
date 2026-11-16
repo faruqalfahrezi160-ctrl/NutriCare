@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/r_page" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp" android:orientation="horizontal" android:paddingHorizontal="16dp" android:background="#FFFFFF" android:gravity="center_vertical">
+        <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/nutricare_logo" android:contentDescription="Logo NutriCare" android:scaleType="fitCenter" android:background="@drawable/r_circle" android:clipToOutline="true" android:layout_marginEnd="8dp"/>
+        <LinearLayout android:layout_width="44dp" android:layout_height="52dp" android:orientation="horizontal" android:id="@+id/btnBack" android:background="@drawable/r_transparent" android:gravity="center" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:layout_marginBottom="8dp">
+            <ImageView android:layout_width="17dp" android:layout_height="17dp" android:src="@drawable/fg_s384_12" android:layout_marginEnd="8dp" android:scaleType="fitCenter" android:contentDescription="@null"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_255" android:textSize="14sp" android:textColor="#FFFFFF" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp"/>
+        </LinearLayout>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:id="@+id/tvExtraTitle" android:text="Resep Sehat" android:textSize="18sp" android:textColor="#111C2D" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="bold" android:lineSpacingExtra="2dp" android:layout_weight="1" android:gravity="center"/>
+        <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/fg_s2_4" android:layout_marginStart="8dp" android:id="@+id/headerProfile" android:scaleType="centerCrop" android:contentDescription="@null" android:background="@drawable/r_circle" android:clipToOutline="true"/>
+    </LinearLayout>
+    <androidx.compose.ui.platform.ComposeView android:layout_width="match_parent" android:layout_height="0dp" android:id="@+id/composeContent" android:layout_weight="1"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp" android:orientation="horizontal" android:background="#FFFFFF" android:paddingHorizontal="6dp" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/navHome" android:gravity="center" android:paddingVertical="8dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" android:background="@drawable/r_nav" android:clickable="true" android:focusable="true" android:orientation="vertical">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/fg_s2_22" android:scaleType="fitCenter" android:contentDescription="@null"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_256" android:textSize="10sp" android:textColor="#3C4A42" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:gravity="center" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/navJournal" android:gravity="center" android:paddingVertical="8dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" android:background="@drawable/r_nav" android:clickable="true" android:focusable="true" android:orientation="vertical">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/fg_s2_23" android:scaleType="fitCenter" android:contentDescription="@null"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_257" android:textSize="10sp" android:textColor="#3C4A42" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:gravity="center" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/navRecipes" android:gravity="center" android:paddingVertical="8dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" android:background="@drawable/r_nav" android:clickable="true" android:focusable="true" android:orientation="vertical">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/fg_s2_24" android:scaleType="fitCenter" android:contentDescription="@null"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_258" android:textSize="10sp" android:textColor="#3C4A42" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:gravity="center" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/navProfile" android:gravity="center" android:paddingVertical="8dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" android:background="@drawable/r_nav" android:clickable="true" android:focusable="true" android:orientation="vertical">
+            <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/fg_s2_25" android:scaleType="fitCenter" android:contentDescription="@null"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/restore_259" android:textSize="10sp" android:textColor="#3C4A42" android:fontFamily="@font/plus_jakarta" android:includeFontPadding="false" android:textStyle="normal" android:lineSpacingExtra="2dp" android:gravity="center" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+

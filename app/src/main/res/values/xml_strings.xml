@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="local">Lokal Sehat • Berkelanjutan</string>
+    <string name="brand">NutriCare</string>
+    <string name="tagline">Smart Nutrition for Your Daily Health</string>
+    <string name="welcome_title">Kearifan Pangan Nusantara</string>
+    <string name="welcome_body">Pilihan makanan lokal sehat dan catatan nutrisi harian.</string>
+    <string name="splash_ready">Mulai kebiasaan sehatmu</string>
+    <string name="splash_info">Jurnal makanan, estimasi nutrisi, dan resep lokal dalam satu aplikasi.</string>
+    <string name="loading">Menyiapkan aplikasi…</string>
+    <string name="login_heading">Selamat Datang Kembali!</string>
+    <string name="login_intro">Masuk untuk memantau asupan gizi harianmu.</string>
+    <string name="etEmail_label">Email / Username</string>
+    <string name="etEmail_hint">nama@email.com</string>
+    <string name="etPassword_label">Kata Sandi</string>
+    <string name="etPassword_hint">Minimal 8 karakter</string>
+    <string name="show_password">Tampilkan kata sandi</string>
+    <string name="remember">Ingat Saya</string>
+    <string name="empty_error"/>
+    <string name="login_button_xml">Login</string>
+    <string name="demo_button">Isi akun demo lokal</string>
+    <string name="register_link">Belum punya akun? Daftar Sekarang</string>
+    <string name="local_note">Akun dan jurnal tersimpan di perangkat ini.</string>
+    <string name="register_heading">Buat Akun Baru</string>
+    <string name="register_intro">Lengkapi profil untuk memulai jurnal makananmu.</string>
+    <string name="etName_label">Nama Lengkap</string>
+    <string name="etName_hint">Nama kamu</string>
+    <string name="condition_label">Kondisi Kesehatan Khusus</string>
+    <string name="etConfirm_label">Konfirmasi Kata Sandi</string>
+    <string name="etConfirm_hint">Ulangi kata sandi</string>
+    <string name="agree">Saya menyetujui penyimpanan akun dan jurnal secara lokal.</string>
+    <string name="register_error"/>
+    <string name="register_button_xml">Register</string>
+    <string name="back_login">Sudah punya akun? Login</string>
+    <string name="back">‹</string>
+    <string name="header_daftar_akun">Daftar Akun</string>
+    <string name="greeting">Halo, Sahabat Sehat!</string>
+    <string name="home_intro">Mari pertahankan kebiasaan makan seimbang hari ini.</string>
+    <string name="daily_target">Target Nutrisi Hari Ini</string>
+    <string name="daily_summary">0 kkal • Gula 0 g • Natrium 0 mg</string>
+    <string name="daily_note">Ringkasan dihitung dari catatan hari ini. Angka nutrisi merupakan estimasi contoh.</string>
+    <string name="features">Fitur Utama Diet Lokal</string>
+    <string name="quick_recipes">Cari Menu Sehat →</string>
+    <string name="quick_add">Tambah Catatan Makan</string>
+    <string name="quick_journal">Buku Harian Makanan →</string>
+    <string name="recent_title">Catatan Makanan Terbaru</string>
+    <string name="recent_empty">Belum ada catatan. Ketuk Tambah Catatan Makan.</string>
+    <string name="header_nutricare">NutriCare</string>
+    <string name="nav_navHome">Beranda</string>
+    <string name="nav_navJournal">Jurnal</string>
+    <string name="nav_navRecipes">Resep</string>
+    <string name="nav_navProfile">Profil</string>
+    <string name="journal_heading">Jurnal Makanan Harian</string>
+    <string name="journal_intro">Riwayat catatan dan estimasi nutrisi harian.</string>
+    <string name="journal_search">Cari nama makanan…</string>
+    <string name="item_count">0 catatan</string>
+    <string name="empty_list">Belum ada catatan yang cocok.</string>
+    <string name="header_jurnal_makanan">Jurnal Makanan</string>
+    <string name="add_record">+ Tambah Data</string>
+    <string name="row_time">SIANG • 12:30</string>
+    <string name="row_name">Nama makanan lokal</string>
+    <string name="row_portion">1 porsi</string>
+    <string name="row_nutrition">420 kkal • Gula 6 g • Natrium 380 mg</string>
+    <string name="row_hint">Ketuk untuk melihat detail  ›</string>
+    <string name="input_heading">Catat Menu Makananmu</string>
+    <string name="form_intro">Sesuaikan porsi dan nutrisi dengan makanan yang kamu konsumsi.</string>
+    <string name="choose_photo">Pilih Foto dari Galeri (Opsional)</string>
+    <string name="etFoodName_label">Nama Makanan Lokal</string>
+    <string name="etFoodName_hint">Contoh: Pepes Ikan</string>
+    <string name="meal_time">Waktu Makan</string>
+    <string name="etPortions_label">Porsi / Takaran Konsumsi</string>
+    <string name="etPortions_hint">1</string>
+    <string name="etCalories_label">Kalori per Porsi (kkal)</string>
+    <string name="etCalories_hint">420</string>
+    <string name="etSugar_label">Gula per Porsi (gram)</string>
+    <string name="etSugar_hint">6</string>
+    <string name="etSodium_label">Natrium per Porsi (mg)</string>
+    <string name="etSodium_hint">380</string>
+    <string name="form_total">Total untuk 1 porsi</string>
+    <string name="etNotes_label">Catatan Kesehatan / Resep Lokal</string>
+    <string name="etNotes_hint">Contoh: Kuah atau saus dipisah.</string>
+    <string name="form_error"/>
+    <string name="input_save">Simpan Data Makanan</string>
+    <string name="cancel">Batal</string>
+    <string name="header_catat_makanan">Catat Makanan</string>
+    <string name="update_heading">Ubah Catatan Makanan</string>
+    <string name="update_save">Perbarui Data</string>
+    <string name="detail_name">Detail Makanan</string>
+    <string name="detail_time">Waktu dan porsi</string>
+    <string name="nutrition_title">Analisis Nutrisi</string>
+    <string name="detail_nutrition">Kalori • Gula • Natrium</string>
+    <string name="nutrition_note">Nilai nutrisi merupakan estimasi contoh, bukan analisis klinis.</string>
+    <string name="notes_title">Catatan Kesehatan</string>
+    <string name="notes_empty">Tidak ada catatan tambahan.</string>
+    <string name="edit">Ubah Data</string>
+    <string name="delete">Hapus Data</string>
+    <string name="header_detail_makanan">Detail Makanan</string>
+    <string name="food_photo">Foto makanan</string>
+    <string-array name="nc_conditions">
+        <item>Hipertensi</item>
+        <item>Umum / Sehat</item>
+        <item>Diabetes Melitus</item>
+        <item>Kolesterol Tinggi</item>
+        <item>Asam Urat</item>
+        <item>Ibu Hamil / Menyusui</item>
+    </string-array>
+    <string-array name="nc_mealtimes">
+        <item>Sarapan</item>
+        <item>Siang</item>
+        <item>Malam</item>
+        <item>Camilan</item>
+    </string-array>
+    <string-array name="nc_filters">
+        <item>Semua</item>
+        <item>Sarapan</item>
+        <item>Siang</item>
+        <item>Malam</item>
+        <item>Camilan</item>
+    </string-array>
+</resources>

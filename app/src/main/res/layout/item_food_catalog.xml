@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:layout_marginBottom="10dp" android:background="@drawable/r_white" android:clickable="true" android:focusable="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:layout_width="44dp" android:layout_height="44dp" android:text="ID" android:textSize="13sp" android:fontFamily="@font/plus_jakarta" android:textColor="#006C49" android:id="@+id/tvFoodBadge" android:gravity="center" android:background="@drawable/r_mint"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginStart="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nama makanan" android:textSize="15sp" android:fontFamily="@font/plus_jakarta" android:textColor="#111C2D" android:id="@+id/tvFoodTitle" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Kategori" android:textSize="11sp" android:fontFamily="@font/plus_jakarta" android:textColor="#53645B" android:id="@+id/tvFoodCategory" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Energi per 100 g" android:textSize="12sp" android:fontFamily="@font/plus_jakarta" android:textColor="#006C49" android:id="@+id/tvFoodEnergy" android:layout_marginTop="10dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sumber data" android:textSize="10sp" android:fontFamily="@font/plus_jakarta" android:textColor="#53645B" android:id="@+id/tvFoodSource" android:layout_marginTop="4dp"/>
+</LinearLayout>

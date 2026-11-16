@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@drawable/r_page">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+  <ImageView android:layout_width="72dp" android:layout_height="72dp" android:layout_gravity="center" android:src="@drawable/nutricare_logo" android:contentDescription="Logo NutriCare"/>
+  <TextView style="@style/NcEyebrow" android:gravity="center" android:layout_marginTop="16dp" android:text="AKSES TIM NUTRICARE"/>
+  <TextView style="@style/NcTitle" android:gravity="center" android:text="Daftar Admin"/>
+  <TextView style="@style/NcMuted" android:gravity="center" android:text="Daftarkan Gmail yang sudah disiapkan tim. Akun langsung aktif untuk masuk ke dashboard."/>
+  <LinearLayout style="@style/NcCard">
+   <TextView style="@style/NcLabel" android:text="Nama lengkap"/>
+   <EditText style="@style/AdminInput" android:id="@+id/etAdminName" android:hint="Nama anggota tim" android:inputType="textPersonName" android:maxLength="80"/>
+   <TextView style="@style/NcLabel" android:text="Gmail / email admin"/>
+   <EditText style="@style/AdminInput" android:id="@+id/etAdminEmail" android:hint="namatim@gmail.com" android:inputType="textEmailAddress"/>
+   <TextView style="@style/NcLabel" android:text="Kata sandi aplikasi NutriCare"/>
+   <EditText style="@style/AdminInput" android:id="@+id/etAdminPassword" android:hint="Minimal 8 karakter" android:inputType="textPassword" android:saveEnabled="false" android:maxLength="128"/>
+   <TextView style="@style/NcLabel" android:text="Konfirmasi kata sandi"/>
+   <EditText style="@style/AdminInput" android:id="@+id/etAdminConfirm" android:hint="Ulangi kata sandi" android:inputType="textPassword" android:saveEnabled="false" android:maxLength="128"/>
+   <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:id="@+id/cbAdminAgreement" android:text="Saya mendaftarkan akun untuk tim pengelola NutriCare dan memahami data masih tersimpan lokal." android:textSize="12sp" android:buttonTint="#10B981"/>
+   <TextView style="@style/NcError" android:id="@+id/tvAdminAuthError" android:visibility="gone"/>
+   <Button style="@style/AdminButton" android:id="@+id/btnAdminSubmitRegistration" android:text="Daftarkan Admin"/>
+  </LinearLayout>
+  <TextView style="@style/NcMuted" android:text="Gunakan kata sandi khusus NutriCare, bukan kata sandi Gmail. Akun ini belum terhubung ke Google atau database tim."/>
+  <Button style="@style/NcSecondaryButton" android:id="@+id/btnAdminBackToLogin" android:text="← Kembali ke Masuk Admin"/>
+ </LinearLayout>
+</ScrollView>

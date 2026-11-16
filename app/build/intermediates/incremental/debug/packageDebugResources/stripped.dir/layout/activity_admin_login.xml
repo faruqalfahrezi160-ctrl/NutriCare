@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@drawable/r_page">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:background="@drawable/r_ai_banner" android:padding="24dp">
+   <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/nutricare_logo" android:background="@drawable/r_card24" android:clipToOutline="true" android:contentDescription="Logo NutriCare"/>
+   <TextView style="@style/NcEyebrow" android:gravity="center" android:layout_marginTop="18dp" android:text="PORTAL ADMIN &amp; PENGEMBANG"/>
+   <TextView style="@style/NcTitle" android:gravity="center" android:text="Masuk Admin"/>
+   <TextView style="@style/NcMuted" android:gravity="center" android:text="Kelola sistem, basis data nutrisi, dan akses aplikasi NutriCare."/>
+  </LinearLayout>
+  <LinearLayout style="@style/NcCard" android:layout_marginTop="20dp">
+   <TextView style="@style/NcLabel" android:text="Email Admin"/>
+   <EditText style="@style/AdminInput" android:id="@+id/etAdminEmail" android:hint="admin@nutricare.id" android:inputType="textEmailAddress"/>
+   <TextView style="@style/NcLabel" android:text="Kata Sandi"/>
+   <EditText style="@style/AdminInput" android:id="@+id/etAdminPassword" android:hint="Minimal 8 karakter" android:inputType="textPassword" android:saveEnabled="false"/>
+   <CheckBox android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/cbAdminShowPassword" android:text="Tampilkan kata sandi" android:textSize="12sp" android:buttonTint="#10B981"/>
+   <CheckBox android:layout_width="match_parent" android:layout_height="48dp" android:id="@+id/cbAdminRemember" android:text="Ingat sesi admin di perangkat ini" android:textSize="12sp" android:buttonTint="#10B981"/>
+   <TextView style="@style/NcError" android:id="@+id/tvAdminAuthError" android:visibility="gone"/>
+   <Button style="@style/AdminButton" android:id="@+id/btnAdminSignIn" android:text="Masuk sebagai Admin  →"/>
+  </LinearLayout>
+  <TextView style="@style/NcMuted" android:background="@drawable/r_lavender" android:padding="14dp" android:text="Mode demo • belum terhubung ke database tim. Data admin disimpan terpisah dari jurnal pengguna. Daftarkan email tim untuk langsung mengakses dashboard admin."/>
+  <Button style="@style/NcSecondaryButton" android:id="@+id/btnAdminRegisterLink" android:text="Daftar akun admin khusus"/>
+  <Button style="@style/NcSecondaryButton" android:id="@+id/btnAdminFillDemo" android:text="Isi akun pemilik demo"/>
+  <TextView style="@style/NcCenter" android:text="Demo: admin.demo@nutricare.id&#10;Sandi: AdminDemo123!"/>
+  <Button style="@style/NcSecondaryButton" android:id="@+id/btnAdminBackToUser" android:text="← Kembali ke login pengguna"/>
+ </LinearLayout>
+</ScrollView>

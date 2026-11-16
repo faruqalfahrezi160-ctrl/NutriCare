@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@drawable/r_page">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="68dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:background="#FFFFFF">
+  <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/nutricare_logo" android:contentDescription="Logo NutriCare" android:layout_marginEnd="10dp"/>
+  <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+   <TextView style="@style/NcSubtitle" android:layout_marginBottom="0dp" android:text="NutriCare Admin"/>
+   <TextView style="@style/NcMuted" android:layout_marginBottom="0dp" android:textSize="10sp" android:id="@+id/tvAdminOperator" android:text="Portal pengelola"/>
+  </LinearLayout>
+  <TextView android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnAdminRefresh" android:text="↻" android:contentDescription="Muat ulang data" android:gravity="center" android:textSize="26sp" android:textColor="#006C49" android:clickable="true" android:focusable="true"/>
+  <TextView android:layout_width="48dp" android:layout_height="48dp" android:id="@+id/btnAdminAccount" android:text="Akun" android:fontFamily="@font/plus_jakarta" android:gravity="center" android:textSize="12sp" android:textColor="#006C49" android:background="@drawable/r_mint" android:clickable="true" android:focusable="true"/>
+ </LinearLayout>
+ <TextView style="@style/NcMuted" android:id="@+id/tvAdminMode" android:layout_marginBottom="0dp" android:background="@drawable/r_mint" android:padding="10dp" android:text="MODE DEMO • database tim belum terhubung" android:textSize="11sp"/>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingTop="14dp">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+   <TextView style="@style/NcTitle" android:layout_width="0dp" android:layout_weight="1" android:layout_marginBottom="4dp" android:textSize="23sp" android:id="@+id/tvAdminSectionTitle" android:text="Dashboard"/>
+   <Button style="@style/NcSecondaryButton" android:layout_width="wrap_content" android:minHeight="48dp" android:textSize="11sp" android:layout_marginBottom="0dp" android:id="@+id/btnAdminPrimary" android:text="Statistik ↗"/>
+  </LinearLayout>
+  <TextView style="@style/NcMuted" android:id="@+id/tvAdminSectionNote" android:text="Ringkasan aktivitas dan pengelolaan NutriCare."/>
+  <EditText style="@style/AdminInput" android:id="@+id/etAdminSearch" android:hint="Cari data…" android:inputType="text" android:visibility="gone"/>
+  <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none" android:id="@+id/adminFiltersScroll" android:visibility="gone">
+   <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:id="@+id/adminFilters" android:paddingVertical="8dp"/>
+  </HorizontalScrollView>
+ </LinearLayout>
+ <ProgressBar android:layout_width="32dp" android:layout_height="32dp" android:layout_gravity="center" android:id="@+id/adminLoading" android:visibility="gone"/>
+ <TextView style="@style/NcError" android:id="@+id/tvAdminError" android:paddingHorizontal="16dp" android:visibility="gone"/>
+ <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+  <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/adminDashboardScroll">
+   <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/adminDashboardContent" android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingBottom="24dp"/>
+  </ScrollView>
+  <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/rvAdminItems" android:paddingHorizontal="16dp" android:paddingBottom="16dp" android:clipToPadding="false" android:visibility="gone"/>
+  <TextView style="@style/NcMuted" android:id="@+id/tvAdminEmpty" android:text="Belum ada data yang cocok." android:layout_gravity="center" android:gravity="center" android:visibility="gone"/>
+ </FrameLayout>
+ <LinearLayout android:layout_width="match_parent" android:layout_height="72dp" android:orientation="horizontal" android:background="#FFFFFF" android:paddingHorizontal="4dp" android:gravity="center_vertical">
+  <TextView style="@style/AdminNav" android:id="@+id/adminNavDashboard" android:text="Beranda" android:drawableTop="@drawable/fg_s2_22"/>
+  <TextView style="@style/AdminNav" android:id="@+id/adminNavConditions" android:text="Kondisi" android:drawableTop="@drawable/fg_s1718_4"/>
+  <TextView style="@style/AdminNav" android:id="@+id/adminNavFoods" android:text="Pangan" android:drawableTop="@drawable/fg_s2_23"/>
+  <TextView style="@style/AdminNav" android:id="@+id/adminNavRecipes" android:text="Menu" android:drawableTop="@drawable/fg_s2_24"/>
+  <TextView style="@style/AdminNav" android:id="@+id/adminNavUsers" android:text="Pengguna" android:drawableTop="@drawable/fg_s2_25"/>
+ </LinearLayout>
+</LinearLayout>

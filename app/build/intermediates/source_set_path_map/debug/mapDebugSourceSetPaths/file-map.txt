@@ -1,0 +1,48 @@
+com.example.loginapp-pngs-0 C:\CODING\mk 4 psas\LoginApp\app\build\generated\res\pngs\debug
+com.example.loginapp-resValues-1 C:\CODING\mk 4 psas\LoginApp\app\build\generated\res\resValues\debug
+com.example.loginapp-packageDebugResources-2 C:\CODING\mk 4 psas\LoginApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.loginapp-packageDebugResources-3 C:\CODING\mk 4 psas\LoginApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.loginapp-debug-4 C:\CODING\mk 4 psas\LoginApp\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.loginapp-debug-5 C:\CODING\mk 4 psas\LoginApp\app\src\debug\res
+com.example.loginapp-main-6 C:\CODING\mk 4 psas\LoginApp\app\src\main\res
+com.example.loginapp-animation-core-release-7 C:\Users\LOQ\.gradle\caches\8.9\transforms\06c20dfa09f06f4e3ed9f40ccaa4c40f\transformed\animation-core-release\res
+com.example.loginapp-activity-1.8.0-8 C:\Users\LOQ\.gradle\caches\8.9\transforms\06cfe46297112336332824b6041dc401\transformed\activity-1.8.0\res
+com.example.loginapp-lifecycle-runtime-ktx-2.6.2-9 C:\Users\LOQ\.gradle\caches\8.9\transforms\0811a147335bdcefbba937dfce6387c1\transformed\lifecycle-runtime-ktx-2.6.2\res
+com.example.loginapp-lifecycle-livedata-core-2.6.2-10 C:\Users\LOQ\.gradle\caches\8.9\transforms\085c5effd52f9864c8851f80c0763012\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.loginapp-material3-1.1.2-11 C:\Users\LOQ\.gradle\caches\8.9\transforms\0c397db632b84ce889363b5556a52caf\transformed\material3-1.1.2\res
+com.example.loginapp-ui-text-release-12 C:\Users\LOQ\.gradle\caches\8.9\transforms\0f42b4cd882296441592d7c2132f405a\transformed\ui-text-release\res
+com.example.loginapp-material-release-13 C:\Users\LOQ\.gradle\caches\8.9\transforms\0ff606c3d4975ef5523405b3843943ba\transformed\material-release\res
+com.example.loginapp-lifecycle-viewmodel-savedstate-2.6.2-14 C:\Users\LOQ\.gradle\caches\8.9\transforms\115e826b07600a39f7e68850798affa5\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.loginapp-profileinstaller-1.3.0-15 C:\Users\LOQ\.gradle\caches\8.9\transforms\1960612a77b45506768cf1ce12ddb798\transformed\profileinstaller-1.3.0\res
+com.example.loginapp-emoji2-1.3.0-16 C:\Users\LOQ\.gradle\caches\8.9\transforms\19f72e00ac837fed2ad25d91064ba629\transformed\emoji2-1.3.0\res
+com.example.loginapp-savedstate-ktx-1.2.1-17 C:\Users\LOQ\.gradle\caches\8.9\transforms\21a76f058dc4d38869c9edc0038eec9b\transformed\savedstate-ktx-1.2.1\res
+com.example.loginapp-ui-util-release-18 C:\Users\LOQ\.gradle\caches\8.9\transforms\2b11746ca47e8b54fcee207ec8acddde\transformed\ui-util-release\res
+com.example.loginapp-customview-poolingcontainer-1.0.0-19 C:\Users\LOQ\.gradle\caches\8.9\transforms\2e08c4a8041078a9eadaa97680c116cf\transformed\customview-poolingcontainer-1.0.0\res
+com.example.loginapp-lifecycle-runtime-2.6.2-20 C:\Users\LOQ\.gradle\caches\8.9\transforms\320e7779197b6167c730965f5a8d83ff\transformed\lifecycle-runtime-2.6.2\res
+com.example.loginapp-lifecycle-viewmodel-2.6.2-21 C:\Users\LOQ\.gradle\caches\8.9\transforms\32bb15f5f9f896692c3098f742156061\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.loginapp-annotation-experimental-1.3.0-22 C:\Users\LOQ\.gradle\caches\8.9\transforms\343d42d4330f06671c1cfee2dc3845ab\transformed\annotation-experimental-1.3.0\res
+com.example.loginapp-runtime-saveable-release-23 C:\Users\LOQ\.gradle\caches\8.9\transforms\3624c60e049010e706f31485583a021f\transformed\runtime-saveable-release\res
+com.example.loginapp-ui-tooling-preview-release-24 C:\Users\LOQ\.gradle\caches\8.9\transforms\4426ca1d5d809542b0a8ac0bcb200234\transformed\ui-tooling-preview-release\res
+com.example.loginapp-activity-compose-1.8.0-25 C:\Users\LOQ\.gradle\caches\8.9\transforms\4a5536498f408791ee7ee2fe3bd30107\transformed\activity-compose-1.8.0\res
+com.example.loginapp-core-runtime-2.2.0-26 C:\Users\LOQ\.gradle\caches\8.9\transforms\5d5ea32cacb3ca9a376ddc17461ff9d6\transformed\core-runtime-2.2.0\res
+com.example.loginapp-core-ktx-1.12.0-27 C:\Users\LOQ\.gradle\caches\8.9\transforms\5f7faf4480dbeca297bb4399075ffc96\transformed\core-ktx-1.12.0\res
+com.example.loginapp-ui-geometry-release-28 C:\Users\LOQ\.gradle\caches\8.9\transforms\6ab6558736bd83135678510085d89f92\transformed\ui-geometry-release\res
+com.example.loginapp-savedstate-1.2.1-29 C:\Users\LOQ\.gradle\caches\8.9\transforms\6e7c9a03e4d3b453326d434e1fb01b26\transformed\savedstate-1.2.1\res
+com.example.loginapp-ui-tooling-data-release-30 C:\Users\LOQ\.gradle\caches\8.9\transforms\726b2c91301cda1e1ea8f6df95f3e727\transformed\ui-tooling-data-release\res
+com.example.loginapp-runtime-release-31 C:\Users\LOQ\.gradle\caches\8.9\transforms\7938c909f08cfbe4da4a274350b566ad\transformed\runtime-release\res
+com.example.loginapp-lifecycle-viewmodel-ktx-2.6.2-32 C:\Users\LOQ\.gradle\caches\8.9\transforms\810fb9a37904142bb466f179df777b8d\transformed\lifecycle-viewmodel-ktx-2.6.2\res
+com.example.loginapp-foundation-layout-release-33 C:\Users\LOQ\.gradle\caches\8.9\transforms\8a665d70d933087fda784f3a08a11d16\transformed\foundation-layout-release\res
+com.example.loginapp-ui-graphics-release-34 C:\Users\LOQ\.gradle\caches\8.9\transforms\8aa7666aa503e40963945fa2d6c031a7\transformed\ui-graphics-release\res
+com.example.loginapp-animation-release-35 C:\Users\LOQ\.gradle\caches\8.9\transforms\8c4ffe9708d8fef38747f23438e2ad96\transformed\animation-release\res
+com.example.loginapp-core-1.12.0-36 C:\Users\LOQ\.gradle\caches\8.9\transforms\8cb5a8d075a4329a41709bfd3a7aa7b4\transformed\core-1.12.0\res
+com.example.loginapp-material-icons-core-release-37 C:\Users\LOQ\.gradle\caches\8.9\transforms\8debd1ddbc70c88f5af0a06bf7dbf41a\transformed\material-icons-core-release\res
+com.example.loginapp-startup-runtime-1.1.1-38 C:\Users\LOQ\.gradle\caches\8.9\transforms\90f1ce892e919d8bb02f9c0a2472ee38\transformed\startup-runtime-1.1.1\res
+com.example.loginapp-ui-tooling-release-39 C:\Users\LOQ\.gradle\caches\8.9\transforms\9395f1bd593585e339acc4b329ea497f\transformed\ui-tooling-release\res
+com.example.loginapp-ui-test-manifest-1.6.0-40 C:\Users\LOQ\.gradle\caches\8.9\transforms\ad54c5849d143c0d1b8376f2a8605114\transformed\ui-test-manifest-1.6.0\res
+com.example.loginapp-lifecycle-process-2.6.2-41 C:\Users\LOQ\.gradle\caches\8.9\transforms\b166d1582556bc7c83547c5365c9cf2e\transformed\lifecycle-process-2.6.2\res
+com.example.loginapp-activity-ktx-1.8.0-42 C:\Users\LOQ\.gradle\caches\8.9\transforms\b81668fdbbdeed04b3b2f75b33a83025\transformed\activity-ktx-1.8.0\res
+com.example.loginapp-material-ripple-release-43 C:\Users\LOQ\.gradle\caches\8.9\transforms\bf91cbb40ebde63d75f6c33c297165f4\transformed\material-ripple-release\res
+com.example.loginapp-foundation-release-44 C:\Users\LOQ\.gradle\caches\8.9\transforms\d3912ae938bbe84849be3bf4f74135ab\transformed\foundation-release\res
+com.example.loginapp-recyclerview-1.3.2-45 C:\Users\LOQ\.gradle\caches\8.9\transforms\d39897b15d186e9dbe0c183f00b337cb\transformed\recyclerview-1.3.2\res
+com.example.loginapp-ui-release-46 C:\Users\LOQ\.gradle\caches\8.9\transforms\deb46292a8faaa0a1d0a0e6440cf28bf\transformed\ui-release\res
+com.example.loginapp-ui-unit-release-47 C:\Users\LOQ\.gradle\caches\8.9\transforms\eff28da2dd7d60a678fb7d6ce9029632\transformed\ui-unit-release\res

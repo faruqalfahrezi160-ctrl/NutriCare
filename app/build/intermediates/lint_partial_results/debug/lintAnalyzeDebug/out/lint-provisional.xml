@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.3.0" type="conditional_incidents">
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_admin_login.xml"
+            line="5"
+            column="151"
+            startOffset="755"
+            endLine="5"
+            endColumn="179"
+            endOffset="783"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_ai_chat.xml"
+            line="4"
+            column="230"
+            startOffset="697"
+            endLine="4"
+            endColumn="258"
+            endOffset="725"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_detail.xml"
+            line="4"
+            column="230"
+            startOffset="697"
+            endLine="4"
+            endColumn="258"
+            endOffset="725"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_detail.xml"
+            line="5"
+            column="259"
+            startOffset="1017"
+            endLine="5"
+            endColumn="318"
+            endOffset="1076"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_detail.xml"
+            line="10"
+            column="280"
+            startOffset="2296"
+            endLine="10"
+            endColumn="308"
+            endOffset="2324"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_detail.xml"
+            line="68"
+            column="272"
+            startOffset="14981"
+            endLine="68"
+            endColumn="331"
+            endOffset="15040"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_detail.xml"
+            line="75"
+            column="263"
+            startOffset="16581"
+            endLine="75"
+            endColumn="322"
+            endOffset="16640"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_detail.xml"
+            line="79"
+            column="260"
+            startOffset="17568"
+            endLine="79"
+            endColumn="319"
+            endOffset="17627"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_extra.xml"
+            line="4"
+            column="230"
+            startOffset="697"
+            endLine="4"
+            endColumn="258"
+            endOffset="725"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_extra.xml"
+            line="5"
+            column="259"
+            startOffset="1017"
+            endLine="5"
+            endColumn="318"
+            endOffset="1076"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_extra.xml"
+            line="10"
+            column="280"
+            startOffset="2319"
+            endLine="10"
+            endColumn="308"
+            endOffset="2347"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_food_catalog.xml"
+            line="4"
+            column="230"
+            startOffset="697"
+            endLine="4"
+            endColumn="258"
+            endOffset="725"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="4"
+            column="230"
+            startOffset="697"
+            endLine="4"
+            endColumn="258"
+            endOffset="725"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="5"
+            column="259"
+            startOffset="1017"
+            endLine="5"
+            endColumn="318"
+            endOffset="1076"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="10"
+            column="280"
+            startOffset="2296"
+            endLine="10"
+            endColumn="308"
+            endOffset="2324"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="28"
+            column="266"
+            startOffset="5679"
+            endLine="28"
+            endColumn="325"
+            endOffset="5738"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="51"
+            column="264"
+            startOffset="12453"
+            endLine="51"
+            endColumn="323"
+            endOffset="12512"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="58"
+            column="264"
+            startOffset="13893"
+            endLine="58"
+            endColumn="323"
+            endOffset="13952"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="110"
+            column="265"
+            startOffset="26051"
+            endLine="110"
+            endColumn="324"
+            endOffset="26110"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_input.xml"
+            line="114"
+            column="270"
+            startOffset="27011"
+            endLine="114"
+            endColumn="329"
+            endOffset="27070"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="4"
+            column="230"
+            startOffset="697"
+            endLine="4"
+            endColumn="258"
+            endOffset="725"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="5"
+            column="259"
+            startOffset="1017"
+            endLine="5"
+            endColumn="318"
+            endOffset="1076"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="10"
+            column="280"
+            startOffset="2296"
+            endLine="10"
+            endColumn="308"
+            endOffset="2324"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="29"
+            column="270"
+            startOffset="5784"
+            endLine="29"
+            endColumn="329"
+            endOffset="5843"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="54"
+            column="264"
+            startOffset="12900"
+            endLine="54"
+            endColumn="323"
+            endOffset="12959"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="61"
+            column="264"
+            startOffset="14340"
+            endLine="61"
+            endColumn="323"
+            endOffset="14399"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="113"
+            column="265"
+            startOffset="26498"
+            endLine="113"
+            endColumn="324"
+            endOffset="26557"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_form_update.xml"
+            line="117"
+            column="270"
+            startOffset="27458"
+            endLine="117"
+            endColumn="329"
+            endOffset="27517"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_home.xml"
+            line="4"
+            column="230"
+            startOffset="697"
+            endLine="4"
+            endColumn="258"
+            endOffset="725"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_home.xml"
+            line="11"
+            column="280"
+            startOffset="2397"
+            endLine="11"
+            endColumn="308"
+            endOffset="2425"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_home.xml"
+            line="66"
+            column="285"
+            startOffset="15273"
+            endLine="66"
+            endColumn="313"
+            endOffset="15301"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_home.xml"
+            line="122"
+            column="263"
+            startOffset="27404"
+            endLine="122"
+            endColumn="322"
+            endOffset="27463"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_list_data.xml"
+            line="4"
+            column="230"
+            startOffset="744"
+            endLine="4"
+            endColumn="258"
+            endOffset="772"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_list_data.xml"
+            line="11"
+            column="280"
+            startOffset="2444"
+            endLine="11"
+            endColumn="308"
+            endOffset="2472"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="9"
+            column="204"
+            startOffset="1342"
+            endLine="9"
+            endColumn="232"
+            endOffset="1370"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="40"
+            column="274"
+            startOffset="8336"
+            endLine="40"
+            endColumn="333"
+            endOffset="8395"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="6"
+            column="230"
+            startOffset="966"
+            endLine="6"
+            endColumn="258"
+            endOffset="994"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="7"
+            column="264"
+            startOffset="1291"
+            endLine="7"
+            endColumn="323"
+            endOffset="1350"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="16"
+            column="205"
+            startOffset="3252"
+            endLine="16"
+            endColumn="225"
+            endOffset="3272"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="113"
+            column="273"
+            startOffset="24337"
+            endLine="113"
+            endColumn="332"
+            endOffset="24396"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="6"
+            column="209"
+            startOffset="938"
+            endLine="6"
+            endColumn="229"
+            endOffset="958"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="14"
+            column="222"
+            startOffset="2573"
+            endLine="14"
+            endColumn="250"
+            endOffset="2601"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="48"
+            column="266"
+            startOffset="10461"
+            endLine="48"
+            endColumn="325"
+            endOffset="10520"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_admin_record.xml"
+            line="3"
+            column="206"
+            startOffset="480"
+            endLine="3"
+            endColumn="234"
+            endOffset="508"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffc0000000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_row.xml"
+            line="5"
+            column="278"
+            startOffset="877"
+            endLine="5"
+            endColumn="306"
+            endOffset="905"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffc0000000"/>
+            <entry
+                name="message"
+                string="Attribute `clipToOutline` is only used in API level 31 and higher (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingStart` you should probably also define `paddingEnd` for right-to-left symmetry">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_row.xml"
+            line="16"
+            column="205"
+            startOffset="3183"
+            endLine="16"
+            endColumn="225"
+            endOffset="3203"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data minSdk="fffffffffff00000" requiresApi="ffffffffffc00000"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="5"
+            column="15"
+            startOffset="205"
+            endLine="5"
+            endColumn="50"
+            endOffset="240"/>
+        <map>
+            <api-levels id="minSdk"
+                value="fffffffffff00000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffffc00000"/>
+            <entry
+                name="message"
+                string="`android:windowLightStatusBar` requires API level 23 (current min is %1$s)"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <fix-replace
+            description="Delete @RequiresApi"
+            replacement="">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/loginapp/GeminiClient.kt"
+                startOffset="2849"
+                endOffset="2865"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/loginapp/GeminiClient.kt"
+            line="50"
+            column="5"
+            startOffset="2849"
+            endLine="50"
+            endColumn="21"
+            endOffset="2865"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="CustomSplashScreen"
+        severity="warning"
+        message="The application should not provide its own launch screen">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/loginapp/XmlActivities.kt"
+            line="74"
+            column="7"
+            startOffset="3399"
+            endLine="74"
+            endColumn="21"
+            endOffset="3413"/>
+        <map>
+            <condition targetGE="31"/>
+        </map>
+    </incident>
+
+</incidents>
