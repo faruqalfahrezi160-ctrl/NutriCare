@@ -1,6 +1,9 @@
 package com.example.loginapp
 
-import android.content.Intent
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
+import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.*
@@ -16,15 +19,82 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
+import java.io.File
+import java.io.FileOutputStream
+import java.util.UUID
 
 @Composable fun MealForm(existing:Meal?,save:(Meal)->Unit,cancel:()->Unit){
     val edit=existing!=null;val context=LocalContext.current;val focus=LocalFocusManager.current
     var name by rememberSaveable(existing?.id){mutableStateOf(existing?.name?:"")};var time by rememberSaveable(existing?.id){mutableStateOf(existing?.time?:"Siang")};var portions by rememberSaveable(existing?.id){mutableStateOf(existing?.portions?:1)};var calories by rememberSaveable(existing?.id){mutableStateOf(existing?.calories?.toFloat()?:420f)};var sugar by rememberSaveable(existing?.id){mutableStateOf(existing?.sugar?.toFloat()?:6f)};var sodium by rememberSaveable(existing?.id){mutableStateOf(existing?.sodium?.toFloat()?:380f)};var photo by rememberSaveable(existing?.id){mutableStateOf(existing?.photo?:"")};var notes by rememberSaveable(existing?.id){mutableStateOf(existing?.notes?:"")};var error by remember{mutableStateOf("")}
-    val picker=rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()){uri->if(uri!=null){runCatching{val size=context.contentResolver.openAssetFileDescriptor(uri,"r").use{it?.length?:-1};require(size in 1..5*1024*1024){"Pilih JPG/PNG berukuran maksimal 5 MB."};context.contentResolver.takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION);photo=uri.toString()}.onFailure{error=it.message?:"Foto tidak dapat dibuka."}}}
+    var showPhotoDialog by remember{mutableStateOf(false)}
+    var tempCameraUri by rememberSaveable{mutableStateOf<String?>(null)}
+
+    val cameraLauncher = rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()){ success ->
+        if (success && tempCameraUri != null) {
+            runCatching {
+                val finalUri = persistCameraPhoto(context, Uri.parse(tempCameraUri!!))
+                photo = finalUri.toString()
+            }.onFailure {
+                photo = tempCameraUri!!
+            }
+        }
+    }
+
+    val cameraPermissionLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()){ granted ->
+        if (granted) {
+            runCatching {
+                val uri = createTempCameraUri(context)
+                tempCameraUri = uri.toString()
+                cameraLauncher.launch(uri)
+            }.onFailure { error = "Gagal membuka kamera: ${it.message}" }
+        } else {
+            error = "Izin kamera dibutuhkan untuk mengambil foto makanan."
+        }
+    }
+
+    val galleryLauncher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()){ uri ->
+        if (uri != null) {
+            runCatching {
+                val finalUri = copyToInternalStorage(context, uri)
+                photo = finalUri.toString()
+            }.onFailure {
+                error = "Gagal memproses foto dari galeri."
+            }
+        }
+    }
+
+    fun openCamera() {
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+            runCatching {
+                val uri = createTempCameraUri(context)
+                tempCameraUri = uri.toString()
+                cameraLauncher.launch(uri)
+            }.onFailure { error = "Gagal membuka kamera: ${it.message}" }
+        } else {
+            cameraPermissionLauncher.launch(Manifest.permission.CAMERA)
+        }
+    }
+
     Scrolling{
         Panel(if(edit)Color(0xFFFFF0E6)else Color(0xFFE0F3F0)){Row(horizontalArrangement=Arrangement.spacedBy(12.dp)){Svg(if(edit)"s515_2.svg" else "s951_1.svg",24);Column{T(if(edit)"MODE PERUBAHAN ENTRI" else "Catat Menu Makananmu",if(edit)10 else 17,true,if(edit)Color(0xFF855300)else Ink);T(if(edit)existing!!.name else "Data akurat membantu mencatat asupan dan kebiasaan makan harianmu.",12,color=Muted)}}}
         T("Foto Makanan",13,true)
-        if(photo.isNotEmpty())Box(Modifier.fillMaxWidth().height(192.dp).clip(RoundedCornerShape(12.dp))){Asset(if(existing?.id=="lunch"&&photo==existing.photo)"s515_0.png" else photo,Modifier.fillMaxSize(),name,true);Button(onClick={picker.launch(arrayOf("image/jpeg","image/png"))},modifier=Modifier.align(Alignment.BottomEnd).padding(12.dp),colors=ButtonDefaults.buttonColors(containerColor=Color.White,contentColor=Green)){Svg("s515_3.svg",16);T(" Ganti Foto",11,true,Green)}}else Surface(Modifier.fillMaxWidth().clickable{picker.launch(arrayOf("image/jpeg","image/png"))},shape=RoundedCornerShape(16.dp),color=Color.White){Column(Modifier.padding(24.dp).fillMaxWidth(),horizontalAlignment=Alignment.CenterHorizontally,verticalArrangement=Arrangement.spacedBy(8.dp)){Surface(shape=androidx.compose.foundation.shape.CircleShape,color=PaleMint){Box(Modifier.size(56.dp),contentAlignment=Alignment.Center){Svg("s951_2.svg",26)}};T("Ambil Foto / Unggah Galeri",15,true);T("JPG, PNG (maksimal 5 MB) • Opsional",11,color=Muted)}}
+        if(photo.isNotEmpty())Box(Modifier.fillMaxWidth().height(192.dp).clip(RoundedCornerShape(12.dp))){
+            Asset(if(existing?.id=="lunch"&&photo==existing.photo)"s515_0.png" else photo,Modifier.fillMaxSize(),name,true)
+            Button(onClick={showPhotoDialog=true},modifier=Modifier.align(Alignment.BottomEnd).padding(12.dp),colors=ButtonDefaults.buttonColors(containerColor=Color.White,contentColor=Green)){
+                Svg("s515_3.svg",16)
+                T(" Ganti Foto",11,true,Green)
+            }
+        } else Surface(Modifier.fillMaxWidth().clickable{showPhotoDialog=true},shape=RoundedCornerShape(16.dp),color=Color.White){
+            Column(Modifier.padding(24.dp).fillMaxWidth(),horizontalAlignment=Alignment.CenterHorizontally,verticalArrangement=Arrangement.spacedBy(8.dp)){
+                Surface(shape=androidx.compose.foundation.shape.CircleShape,color=PaleMint){
+                    Box(Modifier.size(56.dp),contentAlignment=Alignment.Center){Svg("s951_2.svg",26)}
+                }
+                T("Ambil Foto / Unggah Galeri",15,true)
+                T("Kamera langsung atau galeri foto • Opsional",11,color=Muted)
+            }
+        }
         Panel(padding=16){
             Field("Nama Makanan Lokal",name,{name=it;error=""},"Contoh: Gado-gado Komplit",icon="s951_3.svg",error=if(error.isNotEmpty()&&name.isBlank())error else null)
             if(!edit){Row(Modifier.horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(6.dp)){listOf("Gado-gado","Soto Kudus","Pepes Ikan","Pecel Sayur").forEachIndexed{i,v->AssistChip(onClick={name=v;calories=listOf(420f,510f,380f,350f)[i];sodium=listOf(380f,850f,320f,420f)[i];sugar=listOf(6f,5f,2f,7f)[i]},label={T(v,10)})}}}
@@ -45,4 +115,89 @@ import androidx.compose.ui.unit.dp
         }
         if(edit)Panel(Lavender){Row(horizontalArrangement=Arrangement.spacedBy(12.dp)){Svg("s515_18.svg",24);Column{T("Tips Lokal NutriCare",15,true);T("Catat kuah dan bumbu tambahan agar estimasi harian lebih lengkap.",12,color=Muted)}}}
     }
+
+    if (showPhotoDialog) {
+        AlertDialog(
+            onDismissRequest = { showPhotoDialog = false },
+            title = { T("Pilih Sumber Foto", 18, true) },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    TextButton(
+                        onClick = {
+                            showPhotoDialog = false
+                            openCamera()
+                        },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                            Text("📷", fontSize = androidx.compose.ui.unit.TextUnit(18f, androidx.compose.ui.unit.TextUnitType.Sp))
+                            Spacer(Modifier.width(12.dp))
+                            T("Ambil dengan Kamera", 14, true, Green)
+                        }
+                    }
+                    TextButton(
+                        onClick = {
+                            showPhotoDialog = false
+                            galleryLauncher.launch("image/*")
+                        },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                            Text("🖼️", fontSize = androidx.compose.ui.unit.TextUnit(18f, androidx.compose.ui.unit.TextUnitType.Sp))
+                            Spacer(Modifier.width(12.dp))
+                            T("Pilih dari Galeri", 14, true, Ink)
+                        }
+                    }
+                    if (photo.isNotEmpty()) {
+                        TextButton(
+                            onClick = {
+                                showPhotoDialog = false
+                                photo = ""
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                                Text("🗑️", fontSize = androidx.compose.ui.unit.TextUnit(18f, androidx.compose.ui.unit.TextUnitType.Sp))
+                                Spacer(Modifier.width(12.dp))
+                                T("Hapus Foto", 14, true, Red)
+                            }
+                        }
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showPhotoDialog = false }) {
+                    T("Tutup", 13, true, Muted)
+                }
+            }
+        )
+    }
+}
+
+private fun createTempCameraUri(context: Context): Uri {
+    val tempDir = File(context.cacheDir, "camera_photos").apply { mkdirs() }
+    val file = File(tempDir, "temp_camera_${System.currentTimeMillis()}.jpg")
+    return FileProvider.getUriForFile(context, "${context.packageName}.provider", file)
+}
+
+private fun persistCameraPhoto(context: Context, sourceUri: Uri): Uri {
+    val photosDir = File(context.filesDir, "meal_photos").apply { mkdirs() }
+    val destFile = File(photosDir, "meal_${UUID.randomUUID()}.jpg")
+    context.contentResolver.openInputStream(sourceUri)?.use { input ->
+        FileOutputStream(destFile).use { output ->
+            input.copyTo(output)
+        }
+    }
+    return Uri.fromFile(destFile)
+}
+
+private fun copyToInternalStorage(context: Context, sourceUri: Uri): Uri {
+    val photosDir = File(context.filesDir, "meal_photos").apply { mkdirs() }
+    val destFile = File(photosDir, "meal_${UUID.randomUUID()}.jpg")
+    context.contentResolver.openInputStream(sourceUri)?.use { input ->
+        FileOutputStream(destFile).use { output ->
+            input.copyTo(output)
+        }
+    }
+    return Uri.fromFile(destFile)
 }

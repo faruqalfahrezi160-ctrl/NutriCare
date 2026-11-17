@@ -1,5 +1,6 @@
 package com.example.loginapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -24,6 +25,7 @@ import androidx.compose.ui.text.font.*
 import androidx.compose.ui.text.input.*
 import androidx.compose.ui.unit.*
 import com.example.loginapp.ui.theme.LoginAppTheme
+import java.io.File
 
 val Green=Color(0xFF006C49)
 val Mint=Color(0xFF10B981)
@@ -42,7 +44,14 @@ class MainActivity:ComponentActivity(){override fun onCreate(savedInstanceState:
 @Composable
 fun Asset(file:String,modifier:Modifier=Modifier,description:String?=null,crop:Boolean=false){
     val context=LocalContext.current
-    val bitmap=remember(file){runCatching{if(file.startsWith("content:")) context.contentResolver.openInputStream(Uri.parse(file)).use{BitmapFactory.decodeStream(it)} else context.assets.open("figma/"+if(file.endsWith(".svg"))file+".png" else file).use{BitmapFactory.decodeStream(it)}}.getOrNull()?.asImageBitmap()}
+    val bitmap=remember(file){runCatching{
+        when {
+            file.startsWith("content:") -> context.contentResolver.openInputStream(Uri.parse(file))?.use{BitmapFactory.decodeStream(it)}
+            file.startsWith("file:") -> File(Uri.parse(file).path.orEmpty()).inputStream().use{BitmapFactory.decodeStream(it)}
+            File(file).exists() -> File(file).inputStream().use{BitmapFactory.decodeStream(it)}
+            else -> context.assets.open("figma/"+if(file.endsWith(".svg"))file+".png" else file).use{BitmapFactory.decodeStream(it)}
+        }
+    }.getOrNull()?.asImageBitmap()}
     if(bitmap!=null)Image(bitmap,description,modifier,contentScale=if(crop)ContentScale.Crop else ContentScale.Fit)
 }
 @Composable fun Svg(file:String,size:Int=20){Asset(file,Modifier.size(size.dp))}
@@ -82,7 +91,14 @@ fun Asset(file:String,modifier:Modifier=Modifier,description:String?=null,crop:B
     val main=route in listOf("home","journal","recipes","profile")
     fun go(r:String){route=r}
     fun explain(title:String,body:String){info=title to body}
-    fun offlineAI(){explain("Asisten nutrisi","Layanan AI belum dihubungkan. Angka gizi dan saran pada aplikasi ini adalah contoh, bukan hasil analisis makanan atau rekomendasi medis personal.")}
+    fun openAI(mealId:String?=null,foodId:String?=null){
+        val intent=Intent(context,AiChatActivity::class.java).apply{
+            putExtra("email",if(email.isNotBlank())email else store.user)
+            if(mealId!=null)putExtra("meal_id",mealId)
+            if(foodId!=null)putExtra("food_id",foodId)
+        }
+        context.startActivity(intent)
+    }
     fun back(){route=when(route){"register"->"login";"login"->"splash";"add","detail"->"journal";"edit"->"detail";"recipe"->"recipes";else->"home"}}
     BackHandler(route!="splash"&&route!="home"){back()}
     Surface(Modifier.fillMaxSize(),color=Page){
@@ -91,7 +107,11 @@ fun Asset(file:String,modifier:Modifier=Modifier,description:String?=null,crop:B
                 Surface(color=Color.White,shadowElevation=1.dp){Row(Modifier.fillMaxWidth().height(64.dp).padding(horizontal=12.dp),verticalAlignment=Alignment.CenterVertically){
                     if(!main)IconButton(onClick={back()}){Asset("s384_12.svg",Modifier.size(18.dp),"Kembali")}
                     Column(Modifier.weight(1f),horizontalAlignment=if(main)Alignment.CenterHorizontally else Alignment.Start){T(if(main)"NutriCare" else "Catat Makanan",18,true,if(main)Green else Ink);if(main)T(when(route){"home"->"BERANDA";"journal"->"JURNAL";else->"NUTRISI & KESEHATAN"},8,color=Muted)}
-                    if(main){IconButton(onClick={go(if(route=="recipes")"recipes" else "journal")}){Asset("s2_20.svg",Modifier.size(18.dp),"Cari makanan")};IconButton(onClick={explain("Notifikasi","Belum ada notifikasi baru. Semua data pada perangkat ini tersimpan secara lokal.")}){Asset("s2_21.svg",Modifier.size(19.dp),"Notifikasi")}}
+                    if(main){
+                        IconButton(onClick={openAI()}){Asset("s1718_4.svg",Modifier.size(20.dp),"Asisten AI")}
+                        IconButton(onClick={go(if(route=="recipes")"recipes" else "journal")}){Asset("s2_20.svg",Modifier.size(18.dp),"Cari makanan")}
+                        IconButton(onClick={explain("Notifikasi","Belum ada notifikasi baru. Semua data pada perangkat ini tersimpan secara lokal.")}){Asset("s2_21.svg",Modifier.size(19.dp),"Notifikasi")}
+                    }
                     IconButton(onClick={go("profile")}){Asset("s2_4.png",Modifier.size(32.dp).clip(CircleShape),"Profil",true)}
                 }}
             }
@@ -100,13 +120,13 @@ fun Asset(file:String,modifier:Modifier=Modifier,description:String?=null,crop:B
                     "splash"->WelcomeScreen({go("register")},{go("login")})
                     "login"->LoginPage(store,{e,keep->email=e;store.user=if(keep)e else "";go("home")},{go("register")},::explain)
                     "register"->RegisterPage(store,{go("login")},{e->email=e;go("home")})
-                    "home"->HomePage(store.name(email),store.condition(email),meals,{go(it)},{selected=it.id;go("detail")},::offlineAI)
+                    "home"->HomePage(store.name(email),store.condition(email),meals,{go(it)},{selected=it.id;go("detail")}){openAI()}
                     "journal"->JournalPage(meals,{selected=it.id;go("detail")},{go("add")})
                     "add","edit"->MealForm(if(route=="edit")meals.find{it.id==selected}else null,{meal->meals=if(route=="edit")meals.map{if(it.id==meal.id)meal else it}else meals+meal;store.save(email,meals);go("journal")},{back()})
-                    "detail"->{val meal=meals.find{it.id==selected};if(meal!=null)MealDetail(meal,{go("edit")},{meals=meals.filter{it.id!=selected};store.save(email,meals);go("journal")},::offlineAI)}
-                    "recipes"->RecipesPage(favorites,{i->recipeIndex=i;go("recipe")},{name->favorites=if(name in favorites)favorites-name else favorites+name;store.favorites(email,favorites)},::offlineAI)
-                    "recipe"->RecipeDetail(recipes[recipeIndex],recipes[recipeIndex].name in favorites,{val name=recipes[recipeIndex].name;favorites=if(name in favorites)favorites-name else favorites+name;store.favorites(email,favorites)},::offlineAI)
-                    "profile"->ProfilePage(store,email,::explain,::offlineAI,{store.user="";email="";go("login")})
+                    "detail"->{val meal=meals.find{it.id==selected};if(meal!=null)MealDetail(meal,{go("edit")},{meals=meals.filter{it.id!=selected};store.save(email,meals);go("journal")}){openAI(mealId=meal.id)}}
+                    "recipes"->RecipesPage(favorites,{i->recipeIndex=i;go("recipe")},{name->favorites=if(name in favorites)favorites-name else favorites+name;store.favorites(email,favorites)}){openAI()}
+                    "recipe"->RecipeDetail(recipes[recipeIndex],recipes[recipeIndex].name in favorites,{val name=recipes[recipeIndex].name;favorites=if(name in favorites)favorites-name else favorites+name;store.favorites(email,favorites)}){openAI()}
+                    "profile"->ProfilePage(store,email,::explain,{openAI()},{store.user="";email="";go("login")})
                 }
             }
             if(main){Surface(color=Color.White,shadowElevation=4.dp){Row(Modifier.fillMaxWidth().height(68.dp).padding(horizontal=8.dp),horizontalArrangement=Arrangement.SpaceAround,verticalAlignment=Alignment.CenterVertically){listOf("home" to "Beranda","journal" to "Jurnal","recipes" to "Resep Sehat","profile" to "Profil").forEachIndexed{i,(r,label)->Column(Modifier.clip(RoundedCornerShape(12.dp)).background(if(route==r)PaleMint else Color.Transparent).clickable{go(r)}.padding(horizontal=12.dp,vertical=8.dp),horizontalAlignment=Alignment.CenterHorizontally){Svg("s2_${22+i}.svg",20);T(label,9,route==r,if(route==r)Green else Muted)}}}}}
